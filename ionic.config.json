@@ -1,0 +1,8 @@
+{
+  "name": "ProPizi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "e0573108"
+}
