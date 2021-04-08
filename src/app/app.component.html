@@ -1,3 +1,50 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+ 
+  <ion-router-outlet id="main"></ion-router-outlet>
+ 
+  <ion-menu side="start" contentId="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          ProPizi
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+ 
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle >
+          <ion-item lines="none" routerLink="/home/cronologia-acquisti">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Cronologia acquisti</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle >
+          <ion-item lines="none" routerLink="/home/cerca-negozio">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Cerca negozio</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle >
+          <ion-item lines="none" routerLink="/home/codice-personale">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Mostra codice personale</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle >
+          <ion-item lines="none" routerLink="/home/modifica-profilo">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Modifica profilo</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle >
+          <ion-item lines="none" routerLink="/chi-siamo">
+            <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+            <ion-label>Info su</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 </ion-app>
+

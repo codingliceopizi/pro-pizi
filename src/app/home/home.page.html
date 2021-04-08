@@ -1,8 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inbox
+      Home
     </ion-title>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  
   </ion-toolbar>
 </ion-header>
 
@@ -19,6 +23,8 @@
     </ion-toolbar>
   </ion-header>
   
+  
+
   <ion-list>
     <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
   </ion-list>
