@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'chi-siamo',
     loadChildren: () => import('./chi-siamo/chi-siamo.module').then( m => m.ChiSiamoPageModule)
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
+  },
 
 ];
 
