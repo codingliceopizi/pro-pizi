@@ -7,6 +7,58 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content [fullscreen]="true">
+  <!---
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  -->
+
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title color="primary" size="large">
+        Profilo
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-label>
+      <p class="medium">Benvenuto <strong>{{nome}} {{cognome}}</strong>.</p>
+      <p class="medium">Sei un utente <strong>{{privneg}}</strong>.</p>
+      <p class="small">Sei registrato con id:<strong>{{id}}</strong> e email:<strong>{{email}}</strong></p>
+
+      <br>
+
+      <p class="medium">Per effettuare un acquisto, clicca sul pulsante in basso "mostra codice acquisto"</p>
+    </ion-label>
+  </ion-list>
 </ion-content>
+<!-- FOOTER -->
+<ion-footer no-shadow>
+  <ion-button size="fixed" routerLink="/home/cronologia-acquisti" routerDirection="forward">
+    Cronologia
+  </ion-button>
+  <ion-button size="fixed" routerLink="/home/codice-personale" routerDirection="forward">
+    Mostra codice personale
+  </ion-button>
+  <!-- 
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Cronologia</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+  
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Mostra codice personale</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+-->
+</ion-footer>
