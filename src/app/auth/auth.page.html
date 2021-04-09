@@ -6,4 +6,24 @@
 
 <ion-content>
 
+  <!--
+
+    <form #f="ngForm" (ngSubmit) = "registrazione(f)">
+
+    <ion-input name="Nome">Nome</ion-input>
+    <ion-input name="Cognome">Cognome</ion-input>
+
+    <ion-button type="ngSubmit">Conferma</ion-button>
+
+  </form>
+
+  -->
+
+  <ion-list>
+    <ion-label *ngFor="let listaUtenti of getUtenti()" [message] = "getUtenteById(0)"></ion-label>
+    <ion-label ></ion-label>
+  </ion-list>
+
+
+
 </ion-content>
