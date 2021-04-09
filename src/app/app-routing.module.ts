@@ -14,9 +14,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-    path: 'chi-siamo',
-    loadChildren: () => import('./chi-siamo/chi-siamo.module').then( m => m.ChiSiamoPageModule)
   },
   {
     path: 'auth',
