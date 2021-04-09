@@ -23,10 +23,17 @@
     </ion-toolbar>
   </ion-header>
   
+ 
   
 
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message> 
-    
-  </ion-list>
+
+
+  <ion-button size="medium" routerLink="/home/codice-personale" routerDirection="forward">
+    Mostra codice personale
+  </ion-button>
+  <ion-button size="medium" routerLink="/home/cerca-negozio" routerDirection="forward">
+    Cerca Negozio
+  </ion-button>
+
+
 </ion-content>
