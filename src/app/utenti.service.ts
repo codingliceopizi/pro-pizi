@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Utente } from './auth/auth.service';
 
 @Injectable({
   providedIn: 'root'

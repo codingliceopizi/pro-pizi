@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataUtenti, Utente } from './auth.service';
-//import { DataUtenti, Utente } from '../user.model';
+import { Utentee } from '../utenti.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,20 +8,15 @@ import { DataUtenti, Utente } from './auth.service';
 })
 export class AuthPage implements OnInit {
 
-  constructor(private data : DataUtenti) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  //listaUtenti : DataUtenti[];
 
-  getUtenti() : Utente[] {
-    return this.data.getUtenti();
-  }
+  
 
-  getUtenteById(id : number) : Utente {
-    return this.data.getUtenteById(id);
-  }
+
 
 
 
