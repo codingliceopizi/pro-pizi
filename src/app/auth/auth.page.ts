@@ -45,6 +45,8 @@ export class AuthPage implements OnInit {
     let emailLista:string;
     let passwordLista:string;
 
+    let temp = false;
+
     for(let i = 0; i < listaUtenti.length; i++) {
 
       emailLista = listaUtenti[i].getEmail();
@@ -54,12 +56,22 @@ export class AuthPage implements OnInit {
 
         if (passwordInput === passwordLista) {
 
-          console.log("LOGIN CAAAAAAAAAAAZ!!!!!!!!!!!!");
+          temp = true;
 
         }
 
       }
 
+      
+
+
+    }
+
+    if(temp === true) {
+      console.log("login successo");
+    }
+    else {
+      console.log("login fallito");
     }
 
   };
