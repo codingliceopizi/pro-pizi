@@ -46,7 +46,7 @@ Ciccio.setPassword("cazgrene");
 Ciccio.setIsCommerciante(false);
 
 var Luca = new Utentee();
-Luca.setId(0);
+Luca.setId(1);
 Luca.setNome("Luca");
 Luca.setCognome("Piemontese");
 Luca.setEmail("lucapiemontese@gmail.com");
@@ -55,7 +55,7 @@ Luca.setPassword("cazgrene");
 Luca.setIsCommerciante(false);
 
 var Marco = new Utentee();
-Marco.setId(0);
+Marco.setId(2);
 Marco.setNome("Marco");
 Marco.setCognome("Veneto");
 Marco.setEmail("marcoveneto@gmail.com");
@@ -64,7 +64,7 @@ Marco.setPassword("cazgrene");
 Marco.setIsCommerciante(false);
 
 var Pino = new Utentee();
-Pino.setId(0);
+Pino.setId(3);
 Pino.setNome("Pino");
 Pino.setCognome("Bianchi");
 Pino.setEmail("pinobianchi@gmail.com");
@@ -73,7 +73,7 @@ Pino.setPassword("cazgrene");
 Pino.setIsCommerciante(false);
 
 var Maria = new Utentee();
-Maria.setId(0);
+Maria.setId(4);
 Maria.setNome("Maria");
 Maria.setCognome("Verdini");
 Maria.setEmail("mariaverdini@gmail.com");
@@ -82,7 +82,7 @@ Maria.setPassword("cazgrene");
 Maria.setIsCommerciante(false);
 
 var Clara = new Utentee();
-Clara.setId(0);
+Clara.setId(5);
 Clara.setNome("Clara");
 Clara.setCognome("Azzurri");
 Clara.setEmail("clara.azzurri@gmail.com");
@@ -91,7 +91,7 @@ Clara.setPassword("cazgrene");
 Clara.setIsCommerciante(false);
 
 var Chiara = new Utentee();
-Chiara.setId(0);
+Chiara.setId(6);
 Chiara.setNome("Chiara");
 Chiara.setCognome("Campania");
 Chiara.setEmail("chiaracampania@gmail.com");
@@ -100,13 +100,13 @@ Chiara.setPassword("cazgrene");
 Chiara.setIsCommerciante(false);
 
 var Piter = new Utentee();
-Piter.setId(0);
+Piter.setId(7);
 Piter.setNome("Piter");
 Piter.setCognome("Amato");
 Piter.setEmail("piteramato@gmail.com");
 Piter.setUsername("piteramato");
 Piter.setPassword("cazgrene");
-Piter.setIsCommerciante(false);
+Piter.setIsCommerciante(true);
 
 export var listaUtenti = [new Utentee()];
 listaUtenti.pop();
