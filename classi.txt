@@ -1,0 +1,26 @@
+Classi:
+•	Utente
+o	Nome, cognome, username
+o	ID univoco
+o	Email
+o	Password 
+o	Commerciante (si, no)
+o	ID
+
+•	Transazione
+o	ID
+o	Data
+o	Importo
+o	Esercente
+o	Utente
+
+•	Attività 
+o	Email commerciante
+o	Nome, indirizzo
+o	Categoria
+o	Galleria immagini (lista string con URL)
+o	Descrizione testuale
+
+Metodi:
+•	Cronologia.service.ts
+o	Filtrare dati acquisto in base a ID.
