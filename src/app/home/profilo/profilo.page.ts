@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Utentee } from 'src/app/utenti.service';
+import { listaUtenti } from 'src/app/utenti.service';
 
 
 @Component({
@@ -14,24 +14,17 @@ import { Utentee } from 'src/app/utenti.service';
 
 export class ProfiloPage implements OnInit {
   
-  nome:string = Ciccio.getNome();
-  cognome:string = Ciccio.getCognome();
+  nome:string = listaUtenti[loggedId].getNome();
+  cognome:string = listaUtenti[loggedId].getCognome();
   privneg:string = privnegg; 
-  email:string =Ciccio.getEmail();
-  id:number = Ciccio.getId();
+  email:string =listaUtenti[loggedId].getEmail();
+  id:number = listaUtenti[loggedId].getId();
   ngOnInit() {
 
   } 
 }
 //inizializzo utente ciccio
-var Ciccio = new Utentee();
-Ciccio.setId(0);
-Ciccio.setNome("Ciccio");
-Ciccio.setCognome("Rossi");
-Ciccio.setEmail("mariorossi01@gmail.com");
-Ciccio.setUsername("mariorossi01");
-Ciccio.setPassword("cazgrene");
-Ciccio.setIsCommerciante(false);
+var loggedId = 0; //dovremmo prendere questo dalla pagina di login dopo essersi loggati
 
-if(Ciccio.getIsCommerciante()){var privnegg = "COMMERCIANTE"}
+if(listaUtenti[loggedId].getIsCommerciante()){var privnegg = "COMMERCIANTE"}
 else {var privnegg = "PRIVATO"}
