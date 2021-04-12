@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  n:number = 4;//n è il numero acquisti, lo importeremo poi da un'altra pagina
   constructor() {}
 }

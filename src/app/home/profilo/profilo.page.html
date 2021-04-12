@@ -37,13 +37,18 @@
   </ion-list>
 </ion-content>
 <!-- FOOTER -->
-<ion-footer no-shadow>
-  <ion-button size="fixed" routerLink="/home/cronologia-acquisti" routerDirection="forward">
-    Cronologia
-  </ion-button>
-  <ion-button size="fixed" routerLink="/home/codice-personale" routerDirection="forward">
-    Mostra codice personale
-  </ion-button>
+
+<!--<ion-buttons slot="end">  -->
+  <ion-toolbar>
+   <ion-button expand="full" size="medium" routerLink="/home/cronologia-acquisti" routerDirection="forward">
+     Cronologia
+    </ion-button>
+    <ion-button expand="full" size="medium"  routerLink="/home/codice-personale" routerDirection="forward">
+      Mostra codice personale
+    </ion-button>
+  </ion-toolbar>
+<!--  </ion-buttons>  -->
+
   <!-- 
   <ion-tabs>
     <ion-tab-bar slot="bottom">
@@ -61,4 +66,4 @@
     </ion-tab-bar>
   </ion-tabs>
 -->
-</ion-footer>
+

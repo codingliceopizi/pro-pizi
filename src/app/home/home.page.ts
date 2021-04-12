@@ -8,7 +8,7 @@ import { DataService, Message } from '../services/data.service';
 })
 export class HomePage {
   constructor(private data: DataService) {}
-
+  n:number=4; //n è il numero acquisti, lo importeremo poi da un'altra pagina
   refresh(ev) {
     setTimeout(() => {
       ev.detail.complete();

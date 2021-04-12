@@ -4,7 +4,7 @@
       
    
     <ion-buttons>
-      <ion-menu-button>
+      <ion-menu-button mode="ios"> <!-- Metto mode ios perchè così si continua a vedere bene anche in modalità web-->
         <ion-icon name="reorder-three-outline"></ion-icon>
            ProPizi
       </ion-menu-button>
@@ -20,7 +20,7 @@
   </ion-refresher>
 
   <ion-text color="primary">
-    <h1>Benvenuto Mario! Hai contribuito con n acquisti alla tua scuola!</h1>
+    <h1>Benvenuto Mario! Hai contribuito con {{n}} acquisti alla tua scuola!</h1>
   </ion-text>
 
 </ion-content>
