@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { LoggedIdService } from '../logged-id.service';
 import { UtentiService } from '../utenti.service';
 import { AuthService } from './auth.service';
 
@@ -8,17 +9,17 @@ import { AuthService } from './auth.service';
   templateUrl: './auth.page.html',
   styleUrls: ['./auth.page.scss'],
 })
+
 export class AuthPage implements OnInit {
 
-  constructor(private utenti : UtentiService, private authService : AuthService) { }
+  constructor(private utenti : UtentiService, private authService : AuthService, private loggedId : LoggedIdService) { }
   
 
   ngOnInit() {
   }
-
-
-
   
+  
+
 
   onLogin(){
     
@@ -55,6 +56,8 @@ export class AuthPage implements OnInit {
 
           temp = true;
 
+          
+
         }
 
       }
@@ -80,3 +83,6 @@ export class AuthPage implements OnInit {
 
 
 }
+
+
+let logId : number;
