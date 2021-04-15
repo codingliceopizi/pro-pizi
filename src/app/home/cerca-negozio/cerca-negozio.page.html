@@ -8,13 +8,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+  <!--<ion-grid>
     <ion-row>
-      <ion-col col-6>
-        <ion-text color="primary">
-          <h1>Ecco la lista delle attivita' che hanno aderito a ProPizi:</h1>
-        </ion-text>
-      </ion-col>
+      <ion-col col-6>-->
+
+        <ion-list>
+          <ion-item *ngFor="let negozio of listaNegozi" [routerLink]="['./',negozio.id]">
+            <ion-avatar>
+              <ion-img [src]="'assets/imgCategorieNegozi/' + negozio.categoria + '.jpg'"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              {{ negozio.nome }}
+            </ion-label>
+          </ion-item>
+        </ion-list>
+
+      <!--</ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid>-->
 </ion-content>

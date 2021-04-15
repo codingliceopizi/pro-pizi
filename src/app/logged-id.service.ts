@@ -7,5 +7,16 @@ export class LoggedIdService {
 
   constructor() { }
 
-  public loggedId : number;
+  loggedId : number;
+
+  public setId(idUtente : number){
+    this.loggedId = idUtente;
+  }
+
+  public getId(){
+    return this.loggedId;
+  }
+
+
+
 }

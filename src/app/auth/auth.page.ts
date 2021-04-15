@@ -13,22 +13,22 @@ import { AuthService } from './auth.service';
 export class AuthPage implements OnInit {
 
   constructor(private utenti : UtentiService, private authService : AuthService, private loggedId : LoggedIdService) { }
-  
+
 
   ngOnInit() {
   }
-  
-  
+
+
 
 
   onLogin(){
-    
+
     this.authService.login();
 
     console.log("utente autenticato:"+this.authService.userIsAuthenticated);
 
   };
- 
+
   onSubmit(form: NgForm) {
     if (!form.valid) {
       return;
@@ -55,20 +55,21 @@ export class AuthPage implements OnInit {
         if (passwordInput === passwordLista) {
 
           temp = true;
+          this.loggedId.setId(this.utenti.getUtentibyId(i).id);
 
-          
 
         }
 
       }
 
-      
+
 
 
     }
 
     if(temp === true) {
       console.log("login successo");
+
     }
     else {
       console.log("login fallito");
@@ -76,7 +77,7 @@ export class AuthPage implements OnInit {
 
   };
 
-  
+
 
 
 
