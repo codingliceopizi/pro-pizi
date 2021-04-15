@@ -1,11 +1,56 @@
 import { Injectable } from '@angular/core';
 
+
+
+export interface Utente {
+  id : number;
+  nome : string;
+  cognome : string;
+  email : string;
+  username : string;
+  password : string;
+  isCommerciante : boolean;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class UtentiService {
 
+  public listaUtenti2 : Utente[] = [
+    {
+      id : 0,
+      nome : "Ciccio",
+      cognome : "Rossi",
+      email : "cicciorossi15@gmail.com",
+      username : "Ciccio900",
+      password : "cazgrene",
+      isCommerciante : false,
+    },
+    {
+      id : 1,
+      nome : "Luca",
+      cognome : "Piemontese",
+      email : "lucapiemontese@gmail.com",
+      username : "lucapiemontese",
+      password : "cazgrene",
+      isCommerciante : false,
+    },
+  ];
+
   constructor() { }
+
+  public getUtenti(): Utente[] {
+    return this.listaUtenti2;
+  }
+
+  public getUtentibyId(id: number): Utente {
+    return this.listaUtenti2[id];
+  }
+
+  public getLength() : number {
+    return this.listaUtenti2.length;
+  }
 }
 export class Utentee{
   //attributi di utente

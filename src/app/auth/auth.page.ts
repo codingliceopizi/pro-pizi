@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { listaUtenti, Utentee } from '../utenti.service';
+import { UtentiService } from '../utenti.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,7 +9,8 @@ import { listaUtenti, Utentee } from '../utenti.service';
 })
 export class AuthPage implements OnInit {
 
-  constructor() { }
+  constructor(private utenti : UtentiService) { }
+  
 
   ngOnInit() {
   }
@@ -28,18 +29,6 @@ export class AuthPage implements OnInit {
 
     const emailInput = form.value.email;
     const passwordInput = form.value.password;
-    //console.log(email, password);
-
-    /*
-
-    let nomecz = listaUtenti[0].getNome();
-
-    console.log(nomecz);
-
-    nomecz = listaUtenti[1].getNome();
-
-    console.log(nomecz);
-    */
 
 
     let emailLista:string;
@@ -47,10 +36,12 @@ export class AuthPage implements OnInit {
 
     let temp = false;
 
-    for(let i = 0; i < listaUtenti.length; i++) {
+    //console.log(this.utenti.getLength());
 
-      emailLista = listaUtenti[i].getEmail();
-      passwordLista = listaUtenti[i].getPassword();
+    for(let i = 0; i < this.utenti.getLength(); i++) {
+
+      emailLista = this.utenti.getUtentibyId(i).email;
+      passwordLista = this.utenti.getUtentibyId(i).password;
 
       if (emailInput === emailLista) {
 
