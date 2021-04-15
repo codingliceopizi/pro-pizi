@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UtentiService } from '../utenti.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,17 +10,22 @@ import { UtentiService } from '../utenti.service';
 })
 export class AuthPage implements OnInit {
 
-  constructor(private utenti : UtentiService) { }
+  constructor(private utenti : UtentiService, private authService : AuthService) { }
   
 
   ngOnInit() {
   }
 
+
+
   
 
   onLogin(){
-
     
+    this.authService.login();
+
+    console.log("utente autenticato:"+this.authService.userIsAuthenticated);
+
   };
  
   onSubmit(form: NgForm) {
