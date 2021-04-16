@@ -35,10 +35,6 @@ const routes: Routes = [
         loadChildren: () => import('./codice-personale/codice-personale.module').then( m => m.CodicePersonalePageModule)
       },
       {
-        path: 'modifica-profilo',
-        loadChildren: () => import('./modifica-profilo/modifica-profilo.module').then( m => m.ModificaProfiloPageModule)
-      },
-      {
         path: 'profilo',
         loadChildren: () => import('./profilo/profilo.module').then( m => m.ProfiloPageModule)
       },
