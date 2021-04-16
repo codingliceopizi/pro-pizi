@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AcquistiService, Acquisto } from 'src/app/services/acquisti.service';
 
 @Component({
   selector: 'app-cronologia-acquisti',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CronologiaAcquistiPage implements OnInit {
 
-  constructor() { }
+
+  listaAcquisti : Acquisto[];
+
+  constructor(private acquistiService : AcquistiService) { }
 
   ngOnInit() {
+    this.listaAcquisti = this.acquistiService.getListaAcquisti();
   }
 
 }

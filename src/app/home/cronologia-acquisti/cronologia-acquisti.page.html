@@ -8,5 +8,13 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let acquisto of listaAcquisti" [routerLink]="['./',acquisto.id]">
+      <ion-label>
+      </ion-label>
+      <h2><b> ID:{{acquisto.id}}</b></h2>---<h4><i>Importo : {{acquisto.importo}}€</i> </h4>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+

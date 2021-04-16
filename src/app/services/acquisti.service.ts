@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+
 
 
 export class Acquisto {
@@ -12,7 +10,9 @@ export class Acquisto {
   idUtente : string;
   importo : number;
 }
-
+@Injectable({
+  providedIn: 'root'
+})
 export class AcquistiService {
 
   public listaAcquisti : Acquisto[] = [
@@ -33,6 +33,11 @@ export class AcquistiService {
   ]
 
   constructor() { }
+
+  getListaAcquisti(){
+    //facciamo un clone Usiamo lo SPREAD operator
+    return [...this.listaAcquisti];
+  }
 
   getAcquisto(idAcquisto: string){
     return {...this.listaAcquisti.find(r => {
