@@ -11,12 +11,15 @@ export class CercaNegozioPage implements OnInit {
 
   listaNegozi : Negozio[];
 
-  constructor(private loggedIdService : LoggedIdService, private negoziService : NegoziService) { }
+  constructor(private loggedIdService : LoggedIdService,
+     private negoziService : NegoziService) { }
 
   ngOnInit() {
 
     //if (this.loggedIdService.getId()) {
       this.listaNegozi = this.negoziService.getListaNegozi();
+
+
     //}
 
   }

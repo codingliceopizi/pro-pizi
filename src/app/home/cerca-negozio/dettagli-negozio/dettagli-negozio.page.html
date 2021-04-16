@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> {{negozioCorrente.nome}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-text-center">{{ negozioCorrente.descrizione }}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-icon name="search-outline"></ion-icon>
+          Ci trovi a {{ negozioCorrente.citta }}
+        </div>
+        <div class="ion-text-center">
+          {{ negozioCorrente.indirizzo }}
+        </div>
+        <div class="ion-text-center">
+          <ion-icon name="mail-outline"></ion-icon> Contattaci via email {{ negozioCorrente.email }}
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list *ngIf=" negozioCorrente.imgUrl.length>0">
+          <ion-item *ngFor="let ig of negozioCorrente.imgUrl">
+            {{ ig }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

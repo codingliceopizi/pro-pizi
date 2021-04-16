@@ -19,7 +19,16 @@ const routes: Routes = [
       },
       {
         path: 'cerca-negozio',
-        loadChildren: () => import('./cerca-negozio/cerca-negozio.module').then( m => m.CercaNegozioPageModule)
+        children : [
+          {
+            path : '',
+            loadChildren: () => import('./cerca-negozio/cerca-negozio.module').then( m => m.CercaNegozioPageModule)
+          },
+          {
+            path : ':idNegozio',
+            loadChildren: () => import('./cerca-negozio//dettagli-negozio/dettagli-negozio.module').then(m =>m.DettagliNegozioPageModule)
+          }
+        ]
       },
       {
         path: 'codice-personale',
@@ -40,7 +49,8 @@ const routes: Routes = [
       {
         path: 'benvenuto',
         loadChildren: () => import('./benvenuto/benvenuto.module').then( m => m.BenvenutoPageModule)
-      }
+       },
+
     ]
   },
   {
