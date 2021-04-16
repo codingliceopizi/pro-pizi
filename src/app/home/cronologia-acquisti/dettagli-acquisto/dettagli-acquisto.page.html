@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Acquisto {{acquistoCorrente.id}} </ion-title>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-text-center">{{ acquistoCorrente.descrizione }}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-icon name="search-outline"></ion-icon>
+          Id acquisto {{acquistoCorrente.id}}
+        </div>
+        <div class="ion-text-center">
+          Importo Acquisto {{ acquistoCorrente.importo }} 
+        </div>
+        <div class="ion-text-center">
+          Data acquisto {{ acquistoCorrente.data }} 
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list *ngIf=" acquistoCorrente.imgUrl.length>0">
+          <ion-item *ngFor="let ig of acquistoCorrente.imgUrl">
+            {{ ig }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -15,7 +15,17 @@ const routes: Routes = [
     children : [
       {
         path: 'cronologia-acquisti',
-        loadChildren: () => import('./cronologia-acquisti/cronologia-acquisti.module').then( m => m.CronologiaAcquistiPageModule)
+        children : [
+          {
+          path : '',
+          loadChildren: () => import('./cronologia-acquisti/cronologia-acquisti.module').then( m => m.CronologiaAcquistiPageModule)
+          },
+          {
+            path : ':idAcquisto',
+            loadChildren: () => import('./cronologia-acquisti//dettagli-acquisto/dettagli-acquisto.module').then(m =>m.DettagliAcquistoPageModule)
+          }
+        ]
+        
       },
       {
         path: 'cerca-negozio',

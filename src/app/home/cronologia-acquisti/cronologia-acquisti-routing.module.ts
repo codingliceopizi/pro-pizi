@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: CronologiaAcquistiPage
+  },
+  {
+    path: 'dettagli-acquisto',
+    loadChildren: () => import('./dettagli-acquisto/dettagli-acquisto.module').then( m => m.DettagliAcquistoPageModule)
   }
 ];
 
