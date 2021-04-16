@@ -1,47 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    
-      
-   
-    <ion-buttons>
-      <ion-menu-button mode="ios"> <!-- Metto mode ios perchè così si continua a vedere bene anche in modalità web-->
-        <ion-icon name="reorder-three-outline"></ion-icon>
-           ProPizi
-      </ion-menu-button>
-    </ion-buttons>
-  
-  
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        <ion-text color="primary">
-          <h1>Benvenuto Mario! Hai contribuito con {{n}} acquisti alla tua scuola!</h1>
-        </ion-text>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-tabs>
 
-</ion-content>
-<ion-footer no-shadow>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        <ion-button size="full" routerLink="/home/codice-personale" routerDirection="forward">
-          <ion-icon name="bag-handle-outline"></ion-icon>Fai un acquisto
-        </ion-button>
-      </ion-col>
-      <ion-col col-6>
-        <ion-button size="full" routerLink="/home/cerca-negozio" routerDirection="forward">
-          <ion-icon name="search"></ion-icon>Cerca Negozio
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-footer>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="cerca-negozio">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Cerca negozio</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="codice-personale">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Fai acquisto</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  </ion-tabs>
