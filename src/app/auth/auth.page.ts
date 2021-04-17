@@ -40,40 +40,14 @@ export class AuthPage implements OnInit {
 
     let emailLista:string;
     let passwordLista:string;
+    
+    let isLogged : boolean = false;
 
-    let temp = false;
+    isLogged = this.utenti.login(emailInput, passwordInput);
 
-    //console.log(this.utenti.getLength());
+    console.log("UTENTE LOGGATO =" + isLogged);
 
-    for(let i = 0; i < this.utenti.getLength(); i++) {
-
-      emailLista = this.utenti.getUtentibyId(i).email;
-      passwordLista = this.utenti.getUtentibyId(i).password;
-
-      if (emailInput === emailLista) {
-
-        if (passwordInput === passwordLista) {
-
-          temp = true;
-          this.loggedId.setId(this.utenti.getUtentibyId(i).id);
-
-
-        }
-
-      }
-
-
-
-
-    }
-
-    if(temp === true) {
-      console.log("login successo");
-
-    }
-    else {
-      console.log("login fallito");
-    }
+    
 
   };
 
