@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AcquistiService } from 'src/app/services/acquisti.service';
 
 @Component({
   selector: 'app-benvenuto',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BenvenutoPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private acquistiservice:AcquistiService){}
+  nAcquisti = this.acquistiservice.getListaAcquisti().length;
+  
   ngOnInit() {
   }
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService, Message } from '../services/data.service';
-import { UtentiService } from '../utenti.service';
+import { NegoziService } from '../services/negozi.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,8 @@ import { UtentiService } from '../utenti.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private data: DataService, private utenti:UtentiService) {}
-  n:number=4; //n è il numero acquisti, lo importeremo poi da un'altra pagina
-  nome:string=this.utenti.getUtentibyId(loggedId).nome;
+  constructor(private data: DataService, private negozioservice:NegoziService) {}
+  nNegozi = this.negozioservice.getListaNegozi().length;
   refresh(ev) {
     setTimeout(() => {
       ev.detail.complete();
