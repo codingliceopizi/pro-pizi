@@ -53,7 +53,37 @@ export class NegoziService {
       citta : "Reggio Calabria",
       imgUrl : [],
       descrizione: "Abbigliamento casual e classico, per giovani di tutte le età."
-    }
+    },
+    {
+      id : "2",
+      nome : "Plaza caffè",
+      email: "plazacaffe@gmail.com",
+      categoria : CategoriaNegozio.Ristorante,
+      indirizzo: "Via col vento n.8",
+      citta : "Portecorvo",
+      imgUrl : [],
+      descrizione: "Caffè ottimi, sia decaffeinati che non. Specialità : Caffè lungo"
+      },
+      {
+      id : "3",
+      nome : "Vestiting",
+      email: "vestiting@gmail.com",
+      categoria : CategoriaNegozio.Abbigliamento,
+      indirizzo: "Via Pisi n.65",
+      citta : "Amato",
+      imgUrl : [],
+      descrizione: "Tutti i vestiti di cui potreste mai avere bisogno."
+      },
+      {
+        id : "4",
+        nome : "Dress up",
+        email: "dressap@gmail.com",
+        categoria : CategoriaNegozio.Abbigliamento,
+        indirizzo: "Via Totti n.10",
+        citta : "Taurianova",
+        imgUrl : [],
+        descrizione: "I vestiti migliori della Piana, ora now."
+        },
   ]
 
 
