@@ -21,11 +21,13 @@ export class AuthPage implements OnInit {
 
 
 
-  onLogin(){
+  onLogin(id : number){
 
     this.authService.login();
 
-    console.log("utente autenticato:"+this.authService.userIsAuthenticated);
+    console.log("utente autenticato:"+this.authService.userIsAuthenticated + " id= " + id);
+
+    this.loggedId.setId(id);
 
   };
 
@@ -41,11 +43,17 @@ export class AuthPage implements OnInit {
     let emailLista:string;
     let passwordLista:string;
     
-    let isLogged : boolean = false;
+    let check : boolean = false;
 
-    isLogged = this.utenti.login(emailInput, passwordInput);
+    check = this.utenti.login(emailInput, passwordInput);
 
-    console.log("UTENTE LOGGATO =" + isLogged);
+    let id = this.utenti.getUtenteByEmail(emailInput).id;
+
+    if(check) {
+      this.onLogin(id);
+    }
+
+    //console.log("UTENTE LOGGATO =" + check);
 
     
 
@@ -58,6 +66,3 @@ export class AuthPage implements OnInit {
 
 
 }
-
-
-let logId : number;
