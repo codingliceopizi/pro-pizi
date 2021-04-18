@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoggedIdService } from '../logged-id.service';
 import { UtentiService } from '../utenti.service';
 import { AuthService } from './auth.service';
@@ -12,7 +13,7 @@ import { AuthService } from './auth.service';
 
 export class AuthPage implements OnInit {
 
-  constructor(private utenti : UtentiService, private authService : AuthService, private loggedId : LoggedIdService) { }
+  constructor(private utenti : UtentiService, private authService : AuthService, private loggedId : LoggedIdService, private router : Router) { }
 
 
   ngOnInit() {
@@ -28,6 +29,8 @@ export class AuthPage implements OnInit {
     console.log("utente autenticato:"+this.authService.userIsAuthenticated + " id= " + id);
 
     this.loggedId.setId(id);
+
+    this.router.navigateByUrl("home/tabs/benvenuto");
 
   };
 

@@ -21,9 +21,9 @@ export class UtentiService {
   public listaUtenti2 : Utente[] = [
     {
       id : 0,
-      nome : "Ciccio",
+      nome : "Mario",
       cognome : "Rossi",
-      email : "cicciorossi01@gmail.com",
+      email : "mariorossi01@gmail.com",
       username : "Ciccio900",
       password : "cazgrene",
       isCommerciante : false,
