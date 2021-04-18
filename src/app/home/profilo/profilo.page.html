@@ -5,9 +5,9 @@
     </ion-refresher>
   -->
 
-  
+
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
@@ -17,17 +17,32 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-grid> 
+<ion-grid>
   <ion-list>
-    <ion-label>
-      <p class="medium">Benvenuto <strong>{{nome}} {{cognome}}</strong>.</p>
-      <p class="medium">Sei un utente <strong>{{privneg}}</strong>.</p>
-      <p class="small">Sei registrato con id:<strong>{{id}}</strong> e email:<strong>{{email}}</strong></p>
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          <p class="medium">Benvenuto <strong>{{nome}} {{cognome}}</strong>.</p>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          <p class="medium">Sei un utente <strong>{{privneg}}</strong>.</p>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          <p class="small">Sei registrato con id:<strong>{{id}}</strong> e email:<strong>{{email}}</strong></p>
+        </ion-label>
+      </ion-col>
+    </ion-row>
 
-      <br>
-    </ion-label>
   </ion-list>
-</ion-grid>   
+</ion-grid>
 </ion-content>
 <!-- FOOTER -->
 
@@ -50,12 +65,12 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-</ion-footer>  
+</ion-footer>
 -->
 
 <!--  </ion-buttons>  -->
 
-  <!-- 
+  <!--
   <ion-tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="schedule">
@@ -63,8 +78,8 @@
         <ion-label>Cronologia</ion-label>
         <ion-badge>6</ion-badge>
       </ion-tab-button>
-  
-  
+
+
       <ion-tab-button tab="about">
         <ion-icon name="information-circle"></ion-icon>
         <ion-label>Mostra codice personale</ion-label>

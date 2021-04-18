@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title> Acquisto {{acquistoCorrente.id}} </ion-title>
-    <ion-buttons>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-title> Acquisto {{acquistoCorrente.id}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,9 +14,9 @@
     <ion-row>
       <ion-col>
         <div class="ion-text-center">
-          
+
           <h3><ion-icon name="search-outline"></ion-icon>Id acquisto : {{acquistoCorrente.id}}</h3>
-          
+
         </div>
         <div class="ion-text-center">
           <h2><ion-icon name="wallet-outline"></ion-icon>Importo Acquisto : {{ acquistoCorrente.importo }} </h2>

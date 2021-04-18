@@ -1,15 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Cronologia acquisti</ion-title>
-    <ion-buttons>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title>Cronologia acquisti</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let acquisto of listaAcquisti" [routerLink]="['./',acquisto.id]">
+    <ion-item *ngFor="let acquisto of listaAcquisti" [routerLink]="['./',acquisto.id]" detail="true">
         <ion-label><h1><b> ID:{{acquisto.id}}</b></h1></ion-label>
         <h4><i>Importo : {{acquisto.importo}}€</i> </h4>
       </ion-item>
